@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'zappa_django_utils'
 ]
 
 MIDDLEWARE = [
@@ -77,13 +78,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
-    'dev': {
+    'remote-dev': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zappadbname',
-        'USER': 'administrator',
-        'PASSWORD': 'this_is_not_a_good_password',
-        'HOST': 'zappa-db.crt239fsjdlk.us-east-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'zappa-prac',
+        'USER': 'postgres',
+        'PASSWORD': '1234567890',
+        'HOST': "zappa-prac.cx8hagvtgt3m.ap-northeast-2.rds.amazonaws.com",
+        'PORT': '5432'
     }
 }
 
